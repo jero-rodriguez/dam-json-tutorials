@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 - Creación de Elementos (DIVS)</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .user-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .user-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-avatar {
+            width: 80px;
+            height: 80px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1rem auto;
+            font-weight: bold;
+        }
+
+        .user-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .user-card p {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Creación de Elementos DIVS</h1>
+        <p>Práctica de Lenguaje de Marcas - DAM</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Directorio de Empleados</h2>
+            <div id="grid-empleados" class="grid-container">
+                <!-- Las tarjetas (DIVs) se crearán dinámicamente aquí -->
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/04-creacion-elementos-divs.js"></script>
+</body>
+</html>
