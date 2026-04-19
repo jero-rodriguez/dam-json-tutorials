@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo>
+    <pelicula id="1">
+        <titulo>Inception</titulo>
+        <director>Christopher Nolan</director>
+        <anio>2010</anio>
+    </pelicula>
+    <pelicula id="2">
+        <titulo>Interstellar</titulo>
+        <director>Christopher Nolan</director>
+        <anio>2014</anio>
+    </pelicula>
+    <pelicula id="3">
+        <titulo>Matrix</titulo>
+        <director>Hermanas Wachowski</director>
+        <anio>1999</anio>
+    </pelicula>
+    <pelicula id="4">
+        <titulo>Blade Runner</titulo>
+        <director>Ridley Scott</director>
+        <anio>1982</anio>
+    </pelicula>
+</catalogo>

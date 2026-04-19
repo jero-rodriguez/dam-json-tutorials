@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08 - Conversión XML a JSON</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .code-block {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 1.5rem;
+            border-radius: 6px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            white-space: pre-wrap;
+        }
+        
+        .flex-container {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .flex-child {
+            flex: 1 1 300px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Conversión de XML a JSON</h1>
+        <p>Práctica de Lenguaje de Marcas - DAM</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Procesamiento y Conversión</h2>
+            <div id="loading" style="text-align: center; color: var(--secondary-color); padding: 1rem;">
+                Leyendo archivo XML...
+            </div>
+            
+            <div class="flex-container" id="resultado-container" style="display: none;">
+                <div class="flex-child">
+                    <h3>XML Original (Parseado)</h3>
+                    <div id="xml-original" class="code-block" style="font-size: 0.9rem; color: #ce9178;"></div>
+                </div>
+                
+                <div class="flex-child">
+                    <h3>JSON Resultante</h3>
+                    <div id="json-resultado" class="code-block" style="font-size: 0.9rem; color: #9cdcfe;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/08-conversion-xml-json.js"></script>
+</body>
+</html>
