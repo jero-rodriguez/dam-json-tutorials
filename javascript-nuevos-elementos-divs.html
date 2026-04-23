@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugadores Real Madrid</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        #contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1000px;
+            margin-top: 20px;
+        }
+
+        #contenedor div {
+            border: 1px solid #ddd;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            width: 200px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #contenedor h3 {
+            margin: 5px 0;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        #contenedor img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 3px solid #eee;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Nuevos elementos en HTML: Div</h1>
+    <h2>Jugadores del Real Madrid</h2>
+
+    <div id="contenedor"></div>
+
+    <script>
+        let jugadores = [
+            {
+                "nombre": "Karim Benzema",
+                "edad": 34,
+                "ficha": "20.000.000€",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Shahter-Reak_M_2015_%2815%29.jpg"
+            },
+            {
+                "nombre": "Vinicius Jr",
+                "edad": 23,
+                "ficha": "80.000.000€",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/3/37/Vinicius_Jr_2018_%28cropped%29.jpg"
+            },
+            {
+                "nombre": "Luka Modric",
+                "edad": 36,
+                "ficha": "15.000.000€",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Luka_Modri%C4%87_2010.jpg/250px-Luka_Modri%C4%87_2010.jpg"
+            },
+            {
+                "nombre": "Sergio Ramos",
+                "edad": 35,
+                "ficha": "10.000.000€",
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/SergioRamos_in_2010-11.jpg/330px-SergioRamos_in_2010-11.jpg"
+            }
+        ];
+
+        for (let i = 0; i < jugadores.length; i++) {
+            let jugador = jugadores[i];
+            console.log(jugador);
+
+            let divJugador = document.createElement("div");
+            let tituloJugador = document.createElement("h3");
+            let tituloEdad = document.createElement("h3");
+            let tituloFicha = document.createElement("h3");
+            let imagenJugador = document.createElement("img");
+
+            tituloJugador.textContent = jugador.nombre;
+            tituloJugador.style.fontWeight = "bold";
+            tituloJugador.style.color = "#000";
+
+            tituloEdad.textContent = "Edad: " + jugador.edad;
+            tituloFicha.textContent = "Ficha: " + jugador.ficha;
+
+            imagenJugador.src = jugador.foto;
+            imagenJugador.alt = "Foto de " + jugador.nombre;
+
+            divJugador.appendChild(imagenJugador);
+            divJugador.appendChild(tituloJugador);
+            divJugador.appendChild(tituloEdad);
+            divJugador.appendChild(tituloFicha);
+
+            document.getElementById("contenedor").appendChild(divJugador);
+        }
+    </script>
+
+</body>
+
+</html>
