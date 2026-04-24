@@ -12,20 +12,17 @@
     <a href="index.html">← Volver al Menú Principal</a>
     <div class="container">
         <div id="contenido">
-
         </div>
         <script>
             let miCliente = fetch('assets/miCliente.json')
                 .then(response => response.json())
                 .then(cliente => {
                     console.log(JSON.stringify(cliente));
-                    alert(cliente.apellidos);
-                    alert(cliente.aficiones[1]);
-                    alert(cliente.direccion.calle);
-
+                    alert("apellidos: " + cliente.apellidos);
+                    alert("aficiones: " + cliente.aficiones[1]);
+                    alert("calle: " + cliente.direccion.calle);
                     document.getElementById("contenido").textContent = JSON.stringify(cliente, undefined, 2);
                 }).catch(error => console.error('Error al cargar el JSON:', error));
-
         </script>
     </div>
 </body>
