@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Técnica de MongoDB</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 20px auto;
+            color: #333;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #000;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .descarga {
+            background-color: #eee;
+            padding: 10px;
+            border: 1px dashed #666;
+            margin-bottom: 20px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Guía de MongoDB</h1>
+
+    <div class="descarga">
+        <strong>Documentación original:</strong>
+        <a href="guia-mongodb.docx" download>Descargar guia-mongodb.docx</a>
+    </div>
+
+    <section>
+        <h2>Características Generales</h2>
+        <ul>
+            <li><strong>Tipo:</strong> SGBD NoSQL orientado a documentos.</li>
+            <li><strong>Almacenamiento:</strong> Cada registro se almacena en un documento JSON (JavaScript Object
+                Notation).</li>
+            <li><strong>Lenguaje:</strong> JavaScript es el lenguaje de consulta por defecto.</li>
+            <li><strong>Interoperabilidad:</strong> Existen drivers para Java, PHP, C#, C++, Python y Ruby.
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Comparativa: Relacional vs. NoSQL</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Modelo Relacional</th>
+                    <th>NoSQL (MongoDB)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Registros (rígidos) </td>
+                    <td>Documentos (flexibles) </td>
+                </tr>
+                <tr>
+                    <td>Tabla </td>
+                    <td>Colección </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>MongoDB utiliza esquemas dinámicos, lo que permite crear colecciones sin definir una estructura previa.</p>
+    </section>
+
+    <section>
+        <h2>Ventajas Principales</h2>
+        <ul>
+            <li>Modelado flexible de datos.</li>
+            <li>Alto rendimiento en escritura y consultas.</li>
+            <li>Alta escalabilidad.</li>
+            <li>Gestión de clúster de base de datos.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Herramientas de Ecosistema</h2>
+        <h3>MongoDB Atlas</h3>
+        <p>Servicio de base de datos en la nube disponible en AWS, Azure y Google Cloud.</p>
+
+        <h3>MongoDB Compass</h3>
+        <p>Programa cliente para gestionar bases de datos, realizar consultas y crear estructuras de forma gráfica.</p>
+    </section>
+
+    <section>
+        <h2>Ejemplos de Consultas (Filtrado)</h2>
+        <ul>
+            <li><strong>Géneros:</strong> <code>{genres : ["Drama", "Fantasy"]}</code>.</li>
+            <li><strong>Duración:</strong> <code>{runtime: {$gt: 120}}</code> (mayor a 120 minutos).</li>
+            <li><strong>Puntuación:</strong> <code>{"metacritic": {$gt: 80}}</code>.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Comandos de Consola Comunes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Acción</th>
+                    <th>Comando</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mostrar bases de datos</td>
+                    <td><code>show databases</code></td>
+                </tr>
+                <tr>
+                    <td>Asignar base de datos activa</td>
+                    <td><code>use nombre_bd</code></td>
+                </tr>
+                <tr>
+                    <td>Mostrar base de datos actual</td>
+                    <td><code>db</code></td>
+                </tr>
+                <tr>
+                    <td>Insertar un registro</td>
+                    <td><code>db.productos.insert({name: "ejemplo"})</code></td>
+                </tr>
+                <tr>
+                    <td>Buscar documentos</td>
+                    <td><code>db.productos.find()</code></td>
+                </tr>
+                <tr>
+                    <td>Contar documentos</td>
+                    <td><code>db.productos.count()</code></td>
+                </tr>
+                <tr>
+                    <td>Mostrar colecciones</td>
+                    <td><code>show collections</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</body>
+
+</html>
