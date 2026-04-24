@@ -15,7 +15,7 @@
 
         </div>
         <script>
-            let miCliente = fetch('/assets/miCliente.json')
+            let miCliente = fetch('assets/miCliente.json')
                 .then(response => response.json())
                 .then(cliente => {
                     console.log(JSON.stringify(cliente));
