@@ -4,49 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Ejercicio: Objetos y Clases en JS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Programación Orientada a Objetos en JavaScript</h1>
-    <p>Abre la consola del navegador o revisa las alertas para ver el resultado.</p>
+    <a href="index.html">← Volver al Menú Principal</a>
+    <div class="container">
+        <h1>Programación Orientada a Objetos en JavaScript</h1>
+        <p>Abre la consola del navegador o revisa las alertas para ver el resultado.</p>
 
-    <script>
-        class Alumno {
-            constructor(nombre, apellidos, edad, calle, numero, poblacion) {
-                this.nombre = nombre;
-                this.apellidos = apellidos;
-                this.edad = edad;
+        <script>
+            class Alumno {
+                constructor(nombre, apellidos, edad, calle, numero, poblacion) {
+                    this.nombre = nombre;
+                    this.apellidos = apellidos;
+                    this.edad = edad;
 
-                // Propiedad que es a su vez un objeto (sub-objeto)
-                this.domicilio = {
-                    calle: calle,
-                    numero: numero,
-                    poblacion: poblacion
-                };
-            }
-
-            saludar() {
-                let mensaje = `Hola, me llamo ${this.nombre} ${this.apellidos}. `;
-
-                // Comprobamos si la población está definida antes de mostrarla
-                if (this.domicilio.poblacion) {
-                    mensaje += `Vivo en ${this.domicilio.poblacion}.`;
+                    // Propiedad que es a su vez un objeto (sub-objeto)
+                    this.domicilio = {
+                        calle: calle,
+                        numero: numero,
+                        poblacion: poblacion
+                    };
                 }
 
-                alert(mensaje);
-                console.log(mensaje);
+                saludar() {
+                    let mensaje = `Hola, me llamo ${this.nombre} ${this.apellidos}. `;
+
+                    // Comprobamos si la población está definida antes de mostrarla
+                    if (this.domicilio.poblacion) {
+                        mensaje += `Vivo en ${this.domicilio.poblacion}.`;
+                    }
+
+                    alert(mensaje);
+                    console.log(mensaje);
+                }
             }
-        }
 
-        const alumno1 = new Alumno("Pepe", "López", 23, "Calle Norte", 3, "Alcázar");
-        const alumno2 = new Alumno("María", "González", 21, "Calle Mayor", 10, "Madrid");
+            const alumno1 = new Alumno("Pepe", "López", 23, "Calle Norte", 3, "Alcázar");
+            const alumno2 = new Alumno("María", "González", 21, "Calle Mayor", 10, "Madrid");
 
-        alumno1.saludar();
-        alumno2.saludar();
+            alumno1.saludar();
+            alumno2.saludar();
 
-        console.log("Edad del primer alumno:", alumno1.edad);
-        console.log("Calle de María:", alumno2.domicilio.calle);
-    </script>
+            console.log("Edad del primer alumno:", alumno1.edad);
+            console.log("Calle de María:", alumno2.domicilio.calle);
+        </script>
+    </div>
 </body>
 
 </html>

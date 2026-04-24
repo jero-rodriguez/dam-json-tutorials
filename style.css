@@ -1,0 +1,156 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0e0e0;
+  padding: 20px;
+}
+
+body > a {
+  display: block;
+  margin-bottom: 15px;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+body > a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  background-color: white;
+  width: 80%;
+  margin: 0 auto; /* Para centrar la caja */
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+h1,
+h2,
+h3 {
+  color: #333;
+  text-align: center;
+}
+
+a {
+  color: #0066cc;
+}
+
+form {
+  margin: 20px auto;
+  width: 50%;
+}
+
+label {
+  font-weight: bold;
+}
+
+ul.index-list {
+  list-style: none;
+  padding: 0;
+}
+
+ul.index-list li {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.array-display {
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  width: 80%;
+  text-align: center;
+}
+
+#display {
+  border: 2px solid black;
+}
+#display_push {
+  border: 2px solid red;
+}
+#display_pop {
+  border: 2px solid blue;
+}
+#display_unshift {
+  border: 2px solid green;
+}
+#display_sort {
+  border: 2px solid orange;
+}
+#display_reverse {
+  border: 2px solid purple;
+}
+#display_map {
+  border: 2px solid brown;
+}
+
+#contenedor {
+  text-align: center;
+}
+
+#contenedor div {
+  display: inline-block;
+  border: 1px solid gray;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px;
+  margin: 10px;
+  vertical-align: top;
+}
+
+#contenedor img {
+  width: 150px;
+  height: 150px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #cccccc;
+}
+
+.descarga {
+  background-color: #ffffcc;
+  border: 1px solid #cccc00;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+code {
+  background-color: #eeeeee;
+  padding: 2px 5px;
+}
+
+.codigo {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.ejemplo-interactivo {
+  background-color: #e6f2ff;
+  border: 1px solid #99ccff;
+  padding: 10px;
+}
+
+.boton-descarga {
+  background-color: #ff9900;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}

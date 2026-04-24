@@ -5,155 +5,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #display {
-            margin: 5px;
-            padding: 5px;
-            border: 2px solid black;
-            border-radius: 10px;
-        }
-
-        #display_push {
-            margin: 5px;
-            padding: 5px;
-            border: 2px solid red;
-            border-radius: 10px;
-        }
-
-        #display_pop {
-            margin: 5px;
-            padding: 5px;
-            border: 2px solid blue;
-            border-radius: 10px;
-        }
-
-        #display_unshift {
-            margin: 5px;
-            padding: 5px;
-            border: 2px solid green;
-            border-radius: 10px;
-        }
-
-        #display_sort {
-            margin: 5px;
-            padding: 5px;
-            border: 2px solid orange;
-            border-radius: 10px;
-        }
-
-        #display_reverse {
-            margin: 5px;
-            padding: 5px;
-            border: 2px solid purple;
-            border-radius: 10px;
-        }
-
-        #display_map {
-            margin: 5px;
-            padding: 5px;
-            border: 2px solid brown;
-            border-radius: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="display">
+    <a href="index.html">← Volver al Menú Principal</a>
+    <div class="container">
+        <div id="display" class="array-display"></div>
+        <div id="display_push" class="array-display"></div>
+        <div id="display_pop" class="array-display"></div>
+        <div id="display_unshift" class="array-display"></div>
+        <div id="display_sort" class="array-display"></div>
+        <div id="display_reverse" class="array-display"></div>
+        <div id="display_map" class="array-display"></div>
 
+        <script>
+            let cursos = ["1ESO", "2ESO", "3ESO", "4ESO"];
+
+            let primer_for = "";
+            for (let i = 0; i < cursos.length; i++) {
+                let separador = (i === cursos.length - 1) ? "" : ", ";
+                primer_for += cursos[i] + separador;
+            }
+            document.getElementById("display").innerHTML = primer_for;
+
+            cursos.push("1BACH");
+            let i = 0;
+            let segundo_for = "";
+            for (let curso of cursos) {
+                let separador = (i === cursos.length - 1) ? "" : ", ";
+                segundo_for += curso + separador;
+                i++; // CRUCIAL: Incrementar el índice manualmente
+            }
+            document.getElementById("display_push").innerHTML = segundo_for;
+
+            cursos.pop();
+            i = 0;
+            let tercer_for = "";
+            for (let curso of cursos) {
+                let separador = (i === cursos.length - 1) ? "" : ", ";
+                tercer_for += curso + separador;
+                i++;
+            }
+            document.getElementById("display_pop").innerHTML = tercer_for;
+
+            cursos.unshift("1BACH");
+            i = 0;
+            let cuarto_for = "";
+            for (let curso of cursos) {
+                let separador = (i === cursos.length - 1) ? "" : ", ";
+                cuarto_for += curso + separador;
+                i++;
+            }
+            document.getElementById("display_unshift").innerHTML = cuarto_for;
+
+            let quinto_for = "";
+            for (let i = 0; i < cursos.length; i++) {
+                let separador = (i === cursos.length - 1) ? "" : ", ";
+                quinto_for += cursos[i] + separador;
+            }
+            document.getElementById("display_sort").innerHTML = quinto_for;
+
+            let sexto_for = "";
+            cursos.reverse();
+            cursos.splice(2, 1);
+            for (let i = 0; i < cursos.length; i++) {
+                let separador = (i === cursos.length - 1) ? "" : ", ";
+                sexto_for += cursos[i] + separador;
+            }
+            document.getElementById("display_reverse").innerHTML = sexto_for;
+
+            let septimo_for = "";
+            cursos = cursos.map(curso => curso + " Bosco");
+            for (let i = 0; i < cursos.length; i++) {
+                let separador = (i === cursos.length - 1) ? "" : ", ";
+                septimo_for += cursos[i] + separador;
+            }
+            document.getElementById("display_map").innerHTML = septimo_for;
+        </script>
     </div>
-
-    <div id="display_push">
-
-    </div>
-
-    <div id="display_pop">
-
-    </div>
-
-    <div id="display_unshift">
-
-    </div>
-
-    <div id="display_sort">
-
-    </div>
-
-    <div id="display_reverse">
-
-    </div>
-
-    <div id="display_map">
-
-    </div>
-
-    <script>
-        let cursos = ["1ESO", "2ESO", "3ESO", "4ESO"];
-
-        let primer_for = "";
-        for (let i = 0; i < cursos.length; i++) {
-            let separador = (i === cursos.length - 1) ? "" : ", ";
-            primer_for += cursos[i] + separador;
-        }
-        document.getElementById("display").innerHTML = primer_for;
-
-
-        cursos.push("1BACH");
-        let i = 0;
-        let segundo_for = "";
-        for (let curso of cursos) {
-            let separador = (i === cursos.length - 1) ? "" : ", ";
-            segundo_for += curso + separador;
-            i++; // CRUCIAL: Incrementar el índice manualmente
-        }
-        document.getElementById("display_push").innerHTML = segundo_for;
-
-
-        cursos.pop();
-        i = 0;
-        let tercer_for = "";
-        for (let curso of cursos) {
-            let separador = (i === cursos.length - 1) ? "" : ", ";
-            tercer_for += curso + separador;
-            i++;
-        }
-        document.getElementById("display_pop").innerHTML = tercer_for;
-
-
-        cursos.unshift("1BACH");
-        i = 0;
-        let cuarto_for = "";
-        for (let curso of cursos) {
-            let separador = (i === cursos.length - 1) ? "" : ", ";
-            cuarto_for += curso + separador;
-            i++;
-        }
-        document.getElementById("display_unshift").innerHTML = cuarto_for;
-
-        let quinto_for = "";
-        for (let i = 0; i < cursos.length; i++) {
-            let separador = (i === cursos.length - 1) ? "" : ", ";
-            quinto_for += cursos[i] + separador;
-        }
-        document.getElementById("display_sort").innerHTML = quinto_for;
-
-        let sexto_for = "";
-        cursos.reverse();
-        cursos.splice(2, 1);
-        for (let i = 0; i < cursos.length; i++) {
-            let separador = (i === cursos.length - 1) ? "" : ", ";
-            sexto_for += cursos[i] + separador;
-        }
-        document.getElementById("display_reverse").innerHTML = sexto_for;
-
-        let septimo_for = "";
-        cursos = cursos.map(curso => curso + " Bosco");
-        for (let i = 0; i < cursos.length; i++) {
-            let separador = (i === cursos.length - 1) ? "" : ", ";
-            septimo_for += cursos[i] + separador;
-        }
-        document.getElementById("display_map").innerHTML = septimo_for;
-
-    </script>
 </body>
 
 </html>

@@ -5,34 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <a href="index.html">← Volver al Menú Principal</a>
+    <div class="container">
+        <h1>Creación de Elementos (LI) con JavaScript</h1>
+        <h2>Lista de Jugadores de Futbol</h2>
+        <button id="boton">Cargar Lista</button>
+        <ol id="lista_jugadores">
 
-    <h1>Creación de Elementos (LI) con JavaScript</h1>
-    <h2>Lista de Jugadores de Futbol</h2>
-    <button id="boton">Cargar Lista</button>
-    <ol id="lista_jugadores">
+        </ol>
 
-    </ol>
+        <script>
+            document.getElementById("boton").addEventListener("click", cargarLista);
 
-    <script>
-        document.getElementById("boton").addEventListener("click", cargarLista);
+            function cargarLista() {
+                document.getElementById("lista_jugadores").innerHTML = "";
+                let jugadores = ["Messi", "Cristiano", "Neymar", "Mbappé"];
 
-        function cargarLista() {
-            document.getElementById("lista_jugadores").innerHTML = "";
-            let jugadores = ["Messi", "Cristiano", "Neymar", "Mbappé"];
-
-            for (let i = 0; i < jugadores.length; i++) {
-                let jugador = jugadores[i];
-                let listItem = document.createElement("li");
-                listItem.setAttribute("style", "color: blue; font-weight: bold;");
-                listItem.textContent = jugador;
-                document.getElementById("lista_jugadores").appendChild(listItem);
+                for (let i = 0; i < jugadores.length; i++) {
+                    let jugador = jugadores[i];
+                    let listItem = document.createElement("li");
+                    listItem.setAttribute("style", "color: blue; font-weight: bold;");
+                    listItem.textContent = jugador;
+                    document.getElementById("lista_jugadores").appendChild(listItem);
+                }
             }
-        }
-    </script>
-
+        </script>
+    </div>
 </body>
 
 </html>
