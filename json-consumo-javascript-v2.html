@@ -36,7 +36,7 @@
         </form>
 
         <script>
-            let miCliente = fetch('/assets/miCliente.json')
+            let miCliente = fetch('assets/miCliente.json')
                 .then(response => response.json())
                 .then(cliente => {
                     document.getElementById('nombre').value = cliente.nombre;
