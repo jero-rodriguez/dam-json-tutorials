@@ -1,0 +1,12 @@
+{
+    "nombre": "Pedro",
+    "apellidos": "García",
+    "edad": 30,
+    "suscrito": true,
+    "aficiones": ["fútbol", "música", "viajar"],
+    "direccion": {
+        "calle": "Calle Falsa",
+        "numero": 123,
+        "poblacion": "Madrid"
+    }
+}

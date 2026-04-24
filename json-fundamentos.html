@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes de JSON</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="index.html">← Volver al Menú Principal</a>
+    <div class="container">
+        <header>
+            <h1>Guía de Estudio: JSON</h1>
+            <p>Formato de intercambio de datos</p>
+        </header>
+
+        <main>
+            <section>
+                <h2>¿Qué es JSON?</h2>
+                <p>JSON (JavaScript Object Notation) es un formato de texto sencillo para enviar y recibir datos. Es el
+                    estándar actual en la web por su facilidad de lectura.</p>
+
+                <h3>Reglas principales:</h3>
+                <ul>
+                    <li>Los datos van en pares de <strong>nombre : valor</strong>.</li>
+                    <li>Los datos se separan por comas.</li>
+                    <li>Las llaves <code>{ }</code> definen objetos.</li>
+                    <li>Los corchetes <code>[ ]</code> definen arrays (listas).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Tipos de Datos admitidos</h2>
+                <ul>
+                    <li><strong>Cadenas:</strong> "Hola Mundo" (siempre con comillas dobles).</li>
+                    <li><strong>Números:</strong> 25 o 450.75.</li>
+                    <li><strong>Booleanos:</strong> true o false.</li>
+                    <li><strong>Nulos:</strong> null.</li>
+                    <li><strong>Objetos y Arrays.</strong></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Conversión de XML a JSON</h2>
+                <p>Según la chuleta técnica, para pasar de XML a JSON debemos seguir estas pautas:</p>
+                <ol>
+                    <li><strong>Elementos simples:</strong> Se convierten en "clave":"valor".</li>
+                    <li><strong>Elementos complejos:</strong> Se convierten en objetos <code>{ }</code>.</li>
+                    <li><strong>Elementos repetidos:</strong> Se convierten en arrays <code>[ ]</code>.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Ejemplo Práctico</h2>
+                <div class="ejemplo-interactivo">
+                    <p><strong>Datos cargados del objeto:</strong></p>
+                    <div id="salida-json"></div>
+                </div>
+                <pre class="codigo">
+                {
+                    "instituto": "IES Juan Bosco",
+                    "web": "www.iesjuanbosco.es",
+                    "ciclos": ["ASIR", "DAW", "SMR"]
+                }
+            </pre>
+            </section>
+
+            <section style="text-align: center;">
+                <h2>Recursos</h2>
+                <p>Puedes descargar el documento original para estudiar sin conexión:</p>
+                <a href="assets/chuleta-json.pdf" download="Chuleta_JSON_JuanBosco" class="boton-descarga">
+                    Descargar Chuleta JSON
+                </a>
+            </section>
+        </main>
+
+        <script>
+            const datos = {
+                "instituto": "IES Juan Bosco",
+                "web": "www.iesjuanbosco.es",
+                "ciclos": ["ASIR", "DAW", "SMR"]
+            };
+
+            const contenedor = document.getElementById('salida-json');
+            contenedor.innerHTML = `
+        <p>Centro: ${datos.instituto}</p>
+        <p>Página web: <a href="http://${datos.web}">${datos.web}</a></p>
+        <p>Primer ciclo de la lista: ${datos.ciclos[0]}</p>
+    `;
+        </script>
+    </div>
+</body>
+
+</html>
